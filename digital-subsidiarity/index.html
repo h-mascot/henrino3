@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Subsidiarity — Stewardship as a Vocation</title>
+    <meta
+      name="description"
+      content="An interactive reading of the Digital Subsidiarity Network: communities that own and govern their digital life at the lowest competent level, and form each generation to inherit, steward, and hand it on."
+    />
+    <meta name="theme-color" content="#080707" />
+    <meta property="og:title" content="Digital Subsidiarity" />
+    <meta
+      property="og:description"
+      content="Infrastructure designed not merely to give communities sovereignty, but to teach them how to keep it. An interactive essay in fourteen chapters."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <noscript>
+      This interactive reading needs JavaScript for its visualisations. The full
+      text lives in <a href="STORY.md">STORY.md</a>.
+    </noscript>
+
+    <div class="stage" aria-hidden="true"><canvas id="stage"></canvas></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="letterbox letterbox--top" aria-hidden="true"></div>
+    <div class="letterbox letterbox--bottom" aria-hidden="true"></div>
+
+    <header class="hud">
+      <a class="brand" href="#top">Digital&nbsp;Subsidiarity</a>
+      <div class="clock" aria-live="off">
+        <span class="clock-era" id="clock-era">Before</span>
+        <span class="clock-year" id="clock-year">Year 0</span>
+        <span class="clock-status" id="clock-status">Founding</span>
+      </div>
+    </header>
+
+    <nav class="nav" id="nav" aria-label="Chapters"></nav>
+    <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+    <main id="top"></main>
+
+    <div class="curtain" aria-hidden="true"></div>
+    <script src="story.js"></script>
+  </body>
+</html>
