@@ -498,6 +498,8 @@ main { position: relative; z-index: 2; }
   .stat dt { text-align: left; }
   .letterbox { height: calc(5vh * var(--lb)); }
   .kicker { letter-spacing: 0.26em; }
+  .brand { letter-spacing: 0.24em; }
+  .clock-era { display: none; }
   .hero-word { letter-spacing: 0.16em; margin-right: -0.16em; }
 }
 

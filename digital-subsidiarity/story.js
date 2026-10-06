@@ -984,7 +984,7 @@ The full text is in [STORY.md](STORY.md).
         const swap = smooth(0.5, 0.75, p);
         const SP = sats.map((s) => {
           const a = s.swap ? s.a + swap * 0.55 : s.a;
-          return { x: cx + Math.cos(a) * m * (small ? 0.36 : 0.52), y: cy + Math.sin(a) * m * 0.34, a };
+          return { x: cx + Math.cos(a) * m * (small ? 0.36 : 0.52), y: cy + Math.sin(a) * (small ? h * 0.33 : m * 0.34), a };
         });
         g.globalCompositeOperation = "lighter";
         glow(g, cx, cy, B * 1.6, ac, 0.12);
@@ -1019,7 +1019,7 @@ The full text is in [STORY.md](STORY.md).
         });
         if (swap > 0 && swap < 1) {
           const old = sats[3];
-          const q = { x: cx + Math.cos(old.a) * m * (small ? 0.36 : 0.52), y: cy + Math.sin(old.a) * m * 0.34 };
+          const q = { x: cx + Math.cos(old.a) * m * (small ? 0.36 : 0.52), y: cy + Math.sin(old.a) * (small ? h * 0.33 : m * 0.34) };
           glow(g, q.x, q.y, 22, GREY, 0.4 * (1 - swap));
         }
         for (let k = packets.length - 1; k >= 0; k--) {
@@ -1330,7 +1330,7 @@ The full text is in [STORY.md](STORY.md).
         const small = w < 760;
         const N = names.length;
         const ground = h * 0.72;
-        const x0 = w * 0.1, x1 = w * 0.9;
+        const x0 = w * (small ? 0.16 : 0.1), x1 = w * (small ? 0.84 : 0.9);
         const scale = Math.min(w / (N * 125), h / 780);
         const pos = easeOut(p * 1.08) * (N - 1);
         const fi = Math.floor(pos), ff = pos - fi;
